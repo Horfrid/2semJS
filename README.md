@@ -1,2 +1,2 @@
 # 2semJ
-<img src="https://meline.lviv.ua/wp-content/uploads/2019/06/javascript-1231.png">
+<img src="https://sooluciona.com/wp-content/uploads/2019/01/Diferencias-entre-JavaScript-y-HTML.jpg">
