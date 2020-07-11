@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Задание 2</title>
+<script type='text/javascript'>
+function fun1() {
+   var x=10, y=5;
+   document.write("Ответ:",x+y);
+}
+function fun2() {
+  var x="10", y="5";
+  document.write("Ответ:",x+y);
+}
+function fun3() {
+   var x=22, y="5";
+   document.write("Ответ:",x+y);
+   alert('Результатом сложения строки и числа всегда будет строка');
+}
+function fun4() {
+   var x="22", y=5;
+   document.write("Ответ:",x+y);
+   alert('Результатом сложения строки и числа всегда будет строка');
+}
+</script>
+</head>
+<body>
+<input type='button' value='10+5' onclick='fun1()' />
+<input type='button' value='"10"+"5"' onclick='fun2()' />
+<input type='button' value='22+"5"' onclick='fun3()' />
+<input type='button' value='"22"+5' onclick='fun4()' />
+</body>
+</html>
