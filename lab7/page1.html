@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+tr,th,td {
+border: 1px solid black
+}
+#na1{
+    font-weight: 700;
+    color: #000;
+}
+</style>
+
+
+<script type="text/javascript">
+    function prnt() {
+ document.write("<h2>Факультет информационных технологий</h2><p>Студент "+document.forms[0].elements[2].value+" " +document.forms[0].elements[3].value+" специальность "+document.forms[0].elements[4].value+" курс " +document.forms["data"].kurs.value+"</p>"); 
+}
+	function getCheckedCheckBoxes() {
+  var checkboxes = document.getElementsByClassName('checkbox');
+  var checkboxesChecked = []; 
+  for (var index = 0; index < checkboxes.length; index++) {
+     if (checkboxes[index].checked) {
+        checkboxesChecked.push("<li>"+checkboxes[index].value+"</li>");
+     }
+  }
+document.write("<h2> Студент должен сдавать следующие предметы</h2>");
+document.write("<ul>"+checkboxesChecked+"</ul>");
+  
+}
+
+function spisok()
+{
+openWind=window.open("", "Главная страница", "width=250, height=250");
+openWind.document.write('<form><select>');
+if(document.forms[0].elements[9].checked){
+openWind.document.write('<option>'+document.forms[0].elements[9].value+'</option>');}
+if(document.forms[0].elements[10].checked){
+openWind.document.write('<option>'+document.forms[0].elements[10].value+'</option>');}
+if(document.forms[0].elements[11].checked){
+openWind.document.write('<option>'+document.forms[0].elements[11].value+'</option>');}
+if(document.forms[0].elements[12].checked){
+openWind.document.write('<option>'+document.forms[0].elements[12].value+'</option>');}
+if(document.forms[0].elements[13].checked){
+openWind.document.write('<option>'+document.forms[0].elements[13].value+'</option>');}
+openWind.document.write('</select></form>');
+}
+
+</script>
+</head>
+<body>
+
+<form name=data>
+<fieldset>
+<legend>Анкета</legend>
+<textarea name="univ" id="na1" placeholder="Факультет информационных технологий" cols="22" rows="4"></textarea>
+<br/>
+<br/> <input type='text' placeholder="Фамилия" name='lastname' /><br>
+<br/><input type='text' placeholder="Имя" name='firstname' /><br>
+<br><b>Специальность:</b>
+<select name="spec" id="">
+    <option value="ИСиТ">ИСиТ</option>
+    <option value="ПОИТ">ПОИТ</option>
+    <option value="ДЭиВИ">ДЭиВИ</option>
+    <option value="ПОИМБС">ПОИМБС</option>
+</select>
+<br></br>
+<b>Курс:</b>
+<input type='radio' name='kurs' value='1' />1
+<input type='radio' name='kurs' value='2' /> 2
+<input type='radio' name='kurs' value='3' /> 3
+<input type='radio' name='kurs' value='4' /> 4
+<br></br>
+<b>Предметы</b>
+<br>
+<input class="checkbox" type='checkbox' name='space1' value="ОИТ" /> 
+<b>ОИТ</b>
+<input class="checkbox" type='checkbox' name='space2' value="ОАП" /> 
+<b>ОАП</b>
+<input class="checkbox" type='checkbox' name='space3' value="История" /> 
+<b>История</b>
+<input class="checkbox" type='checkbox' name='space4' value="Физика" /> 
+<b>Физика</b>
+<input class="checkbox" type='checkbox' name='space5' value="Математика" /> 
+<b>Математика</b>
+<br></br>
+<input type="button" name="sub" value="submit">
+<input type="button"  name="res"  value="reset">
+<br></br>
+<input type="button" onclick="prnt()" name="print"  value="Информация">
+<input type="button" onclick="getCheckedCheckBoxes()" name="CheckBoxes"  value="Что сдавать">
+</fieldset>
+</form>
+
+<form>
+<fieldset>
+<p> <input type='button' value='Задание 4' onclick='spisok()' /></p>
+</fieldset>
+</form>
+</body>
+<footer></footer>
+
+</html>

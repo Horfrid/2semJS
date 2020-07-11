@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Лаба 8</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<span class="avatar"><img id="image" src="avatar1.jpg" alt="" /></span>
+						<h1>This is <strong>Visualize</strong>, a responsive site template designed by <a id="author-link" style="color:#fff" href="#">TEMPLATED</a><br />
+						and released for free under the Creative Commons License.</h1>
+						<p onclick="notext()" id="sometext">Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text</p>
+						<img id="dynamic-img" src="view.jpg" style="height:250px">
+						<p id="create-border">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</header>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p id="par">&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+						
+					<script>
+						var link = document.getElementById("author-link");
+						link.onmouseover = function(){
+							this.setAttribute("style","color:red");
+						}
+						//Задание1
+						
+						var text = document.getElementById("par");
+						text.onclick = function(){
+							this.style.cssText = "font-size: 1.2em"; 
+						}
+						//Задание2
+						
+						var image=document.getElementById("image");
+						image.onclick = function() {
+						image.src = 'avatar2.jpg';
+						}
+						//Задание3
+						
+						function notext(){
+						var txt=document.getElementById("sometext");
+						txt.innerHTML = "<img src=\"images/no.png\">";
+						}
+						//Задание4
+						
+						var dimg = document.getElementById("dynamic-img");
+						dimg.onmouseover = function(){
+							this.setAttribute("style","height:285px");
+						}
+						dimg.onmouseout = function(){
+							this.setAttribute("style","height:250px");
+						}
+						//Задание5
+						
+						var brd=document.getElementById("create-border");
+						brd.addEventListener('dblclick', function (){
+							this.setAttribute("style","border: 2px dashed #090971");
+						})		
+						brd.onmouseout = function(){
+							this.setAttribute("style","border: none");
+						}
+						//Задание6
+						</script>
+					</script>
+					</footer>
+
+			</div>
+
+
+	</body>
+</html>

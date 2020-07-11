@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>lab10</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+<style>
+#block {
+    position:absolute;
+    background-color:#abc;
+    left:50px;
+    width:90px;
+    height:90px;
+    margin:5px;
+	border: solid 1px black;
+	border-radius: 30px;
+}
+
+</style>
+    <script type="text/javascript">
+$(function() {
+	$('#drag1').draggable();
+	$('#ball').draggable();	
+});
+
+    </script> 
+</head>
+<body>    
+    <div id="drag1">
+        Перетаcкиваемый текстовый блок
+    </div>
+	<br>
+	<img id="ball" height=75 src="basket.png">
+	<br></br>
+	<img id="car" style="position:relative" src="car.png">
+	<br></br>
+	<div id="block"> </div>
+
+</body>
+<footer>
+<script>
+$( "#car" ).click(function() {
+  $( "#car" ).first().animate({
+    left: 1000
+  }, {
+    duration: 8000,
+    step: function( now, fx ){
+      $( ".block" ).slice( 1 ).css( "left", now );
+    }
+  });
+});
+
+$(document).ready(function(){
+
+	    $("#block").animate({
+		 left: 1100},{
+			duration: 10000,
+	         step: function(now, fx) {
+			$(fx.elem).offset({top: Math.sin(now/80)*170+300});	    
+		 }
+		},"slow"); 
+
+
+});
+</script>
+</footer>
+</html>

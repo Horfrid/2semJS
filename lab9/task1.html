@@ -1,0 +1,55 @@
+<HTML>
+<head><title>Перемещаемые текстовые облас-ти</title></head> 
+<BODY>
+<img id="ball" style="width: 125px;" src="basket.png">
+<textarea style="position:absolute"> TEXTTEXTTEXTTEXTTEXT </textarea>
+</BODY> 
+<SCRIPT> 
+var ball = document.getElementById('ball');
+ball.onmousedown = function(e) {
+  var coords = getCoords(ball);
+  var shiftX = e.pageX - coords.left;
+  var shiftY = e.pageY - coords.top;
+  ball.style.position = 'absolute';
+  document.body.appendChild(ball);
+  moveAt(e);
+  ball.style.zIndex = 1000; 
+  function moveAt(e) {
+    ball.style.left = e.pageX - shiftX + 'px';
+    ball.style.top = e.pageY - shiftY + 'px';
+  }
+  document.onmousemove = function(e) {
+    moveAt(e);
+  };
+  ball.onmouseup = function() {
+    document.onmousemove = null;
+    ball.onmouseup = null;
+  };
+}
+ball.ondragstart = function() {
+  return false;
+};
+function getCoords(elem) {  
+  var box = elem.getBoundingClientRect();
+  return {
+    top: box.top + pageYOffset,
+    left: box.left + pageXOffset
+  };
+}
+///////Перемещение текста
+document.querySelector("textarea").addEventListener('click', function (e) {
+  var div = e.target
+  var rect = div.getBoundingClientRect()
+  var dx = e.pageX - rect.left, dy = e.pageY - rect.top
+  div.style.background = 'silver'
+  document.addEventListener('click', function handler(e) {
+    div.style.left = e.pageX - dx + 'px'
+    div.style.top = e.pageY - dy + 'px'
+    div.style.background = ''
+    document.removeEventListener('click', handler, true)
+    event.stopPropagation()
+  }, true)
+})
+
+</SCRIPT> 
+</HTML>

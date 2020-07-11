@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Графики</title>
+<style>
+</style>
+</head>
+<body>
+  <button onclick="curve()">y=x^2</button>
+  <button onclick="curve2()">y=x^3</button>
+  <button onclick="curve3()">y=sinx</button>
+  <button onclick="curve4()">y=cosx</button>
+  <form name="myForm">
+  <select id="mySelect" onchange="color()" name="color" size="1">
+	<option id="redopt" value="red" >red</option>
+	<option id="greenopt" value="green">green</option>
+	<option id="blueopt" value="blue">blue</option>
+	<option id="purpleopt" value="purple">purple</option>
+</select>
+</form>
+  <canvas id="canvas" width=700px height=500px style="background:white"></canvas>
+</body>
+<footer>
+<script id="myscript">
+function curve(){
+var ctx=canvas.getContext("2d");
+ctx.clearRect(0,0,700,500);
+for(var i=-30;i<30;i+=0.01){
+    ctx.fillStyle="blue"; 
+    ctx.fillRect(200+i*10,300-2*Math.pow(i,2),2,2);
+}
+}
+function curve2(){
+var ctx=canvas.getContext("2d");
+ctx.clearRect(0,0,700,500);
+for(var i=-30;i<30;i+=0.01){
+   ctx.fillStyle="blue"; 
+    ctx.fillRect(200+i*10,250-Math.pow(i,3),2,2);
+}
+}
+function curve3(){
+var ctx=canvas.getContext("2d");
+ctx.clearRect(0,0,700,500);
+for(var i=-80;i<80;i+=0.01){
+   ctx.fillStyle="blue"; 
+    ctx.fillRect(100+i*10,250-60*Math.sin(0.5*i),2,2);
+}
+}
+function curve4(){
+var ctx=canvas.getContext("2d");
+ctx.clearRect(0,0,700,500);
+for(var i=-80;i<80;i+=0.01){
+   ctx.fillStyle="blue"; 
+    ctx.fillRect(100+i*10,250-60*Math.cos(0.5*i),2,2);
+}
+}
+
+</script>
+</footer>
+</html>

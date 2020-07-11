@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Движение по кривой</title>
+<style>
+#img1 {
+  position: absolute;
+  top: 378px; left: 125px;
+}
+
+</style>
+</head>
+<body>
+  <img src="basket.png" width=50 id="img1">
+</body>
+<footer>
+<script id="myscript">
+function movement( xid,yexpr, xexpr, x0, y0,dx,t,time){
+  if (!yexpr) return null;
+  if (!xexpr) xexpr="x";
+  if (!x0) x0=0;
+  if (!y0) y0=0;
+  if (!dx) dx=0.1
+  if(!t) t=100;
+  if(!time) time=0;
+
+  var xobj=document.getElementById(xid);
+  if (!xobj) return;
+  if (!xobj.style.position) xobj.style.position="absolute";
+  x=0;
+  sumtime=0;
+  interval=0;
+  interval=setInterval("move2('"+xid+"','"+yexpr+"','"+xexpr+"',"+x0+","+y0+","+t+","+dx+","+time+",interval)",t);
+  return interval
+} 
+function  move2(xid,yexpr, xexpr, x0, y0,t, dx,time,interval){
+  x=x+dx;
+  document.getElementById(xid).style.top=parseInt(y0+eval(yexpr))+"px";
+  document.getElementById(xid).style.left=parseInt(x0+eval(xexpr))+"px";
+  if (time>0){
+	sumtime+=t;
+	if (sumtime>time*1000)clearInterval(interval); 
+  }
+}
+movement("img1",
+         "100*Math.sin(x)-10*Math.sin(2*x)",
+         "100*Math.cos(x)+80*Math.cos(2*x)",
+          200,250,0.15,100,60);
+
+</script>
+</footer>
+</html>
