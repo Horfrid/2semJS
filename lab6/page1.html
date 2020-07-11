@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+tr,th,td {
+border: 1px solid black
+}
+</style>
+</head>
+<body>
+<script>
+function fun1() {
+window.open("file:///D:/1study/%D0%BE%D0%B8%D1%82/html-css-js/js/lab1/page2.html", "_blank", "top=100, left=100, width=400, height=500, scrollbars=yes, resizable=yes");
+}
+function fun2() {
+window.close();
+}
+function fun3() {
+var myWindow = window.open("", "Главная страница", "width=250, height=250");
+myWindow.document.write("<p>Содержимое страницы</p>");
+}
+function fun4() {
+document.write('<table style="border: 1px solid black"><thead><th>Свойство</th><th>Значение</th></thead>');
+document.write('<tr>'+'<td>'+'Информация о браузере:'+'</td><td>'+navigator.userAgent+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'Версия браузера:'+'</td><td>'+navigator.appVersion+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'Название браузера:'+'</td><td>'+navigator.appName+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'Кодовое назание браузера:'+'</td><td>'+navigator.appCodeName+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'Операционная система:'+'</td><td>'+navigator.platform+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'Разрешено ли Java:'+'</td><td>'+navigator.javaEnabled()+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'Разрешение экрана: <b>'+'</td><td>'+screen.width+'X'+ 
+screen.height+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'Глубина цвета: ' +'</td><td>'+ screen.colorDepth+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'URL, которые были посещены в данном окне браузера: ' +'</td><td>'+ history.length+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'URL текущего документа ' +'</td><td>'+ location.href+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'Путь к загруженному документу ' +'</td><td>'+ location.pathname+'</td>'+'</tr>');
+document.write('<tr>'+'<td>'+'Имя домена загруженного документа' +'</td><td>'+ location.host+'</td>'+'</tr>');
+document.write('</table>');
+}
+</script>
+<input type='button' value='Открыть окно' onclick='fun1()' />
+<input type='button' value='Закрыть окно' onclick='fun2()' />
+<input type='button' value='Добавить текст' onclick='fun3()' />
+<input type='button' value='Узнать информацию' onclick='fun4()' />
+</body>
+</html>

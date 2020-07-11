@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Моя первая страница</title>
+	<script>
+function go() {
+ for (let i=0; i<document.all.length; i++){
+ alert(document.all[i].tagName+'\n');
+ 
+}
+alert(all);
+}        
+function go1() {
+	for (var i=0; i<document.body.childNodes.length; i++) {
+	var child = document.body.childNodes[i]
+	alert(child.tagName + " " +i) }
+}   
+		
+function go2() {
+	var span1 = document.body.childNodes[3].innerHTML
+	var span2 = document.body.getElementsByTagName('span')[0].innerHTML
+	var span3 = document.getElementById('sp1').innerHTML
+	document.write(span1 + "<br>");  
+	document.write(span2 + "<br>"); 
+	document.write(span3 + "<br>");
+}
+  function go3() {
+	var b=document.getElementById('mark1').innerHTML;
+	var c=document.getElementById('mark2').innerHTML;
+	var d=document.getElementById('mark3').innerHTML;
+	var e=document.getElementById('mark4').innerHTML;
+	var f=document.getElementById('mark5').innerHTML;
+	var a=Math.round(b*0.2+c*0.2+d*0.2+e*0.2+f*0.2);
+	document.body.getElementsByTagName('table')[0].getElementsByTagName('tr')[8].innerHTML='<td> </td><td> </td><td>Средний балл</td><td>'+a+'</td>'
+}                            
+    </script>               
+    </head>
+    <body vlink=green bgcolor=grey>
+        <h1 style="text-align:center;">Я, <a href="2page.html">Иванов Иван Иванович</a>, изучаю <b style="color:red;">HTML</b> и CSS</h1>
+        <span id="sp1">Задание 1. Создать HTML-документ (заголовок Моя первая страница) cо следующим содержимым:
+            Заголовок в центре страницы (теги h1) «Я, ФИО, изучаю HTML и CSS».  
+            </span>
+        <p>Аббревиатуру <b>HTML</b> выделить другим цветом. Три абзаца текста (можно своя автобиография) по 3–4 строки каждый абзац.</p>
+        <p>Для каждого <i>абзаца</i> свой шрифт, размер, цвет (тег <i style="color: #821793;">font</i>). Для каждого абзаца придумать заголовок (h3), а также заголовок для всего текста (h2). Внутри каждого абзаца выделить несколько слов элементами span.</p>
+        <h2 style="text-align:center;">Список</h2>
+        <ol>
+            <li>Элемент 1
+                <ul>
+                    <li>Элемент 1-1</li>
+                    <li>Элемент 1-2</li>
+                </ul>
+            </li>
+            <li>Элемент 2
+                <ul type=square>
+                    <li>Элемент 2-1</li>
+                    <li>Элемент 2-2</li>
+                    <li>Элемент 2-3</li>
+                </ul>
+            </li>
+            <li>Элемент 3
+                <ul type=disc>
+                    <li>Элемент 3-1</li>
+                    <li>Элемент 3-2</li>
+                </ul>
+            </li>
+        </ol>
+        <h2 style="text-align:center;">Оценки</h2>
+        <table style="margin: 50px 0px 0px 25%" border="1">
+            <tr>
+                <th width=125>ФИО</th>
+                <th width=375 colspan=3><a href="2page.html">Иванов Иван Иванович</a></th>
+            </tr>
+            <tr align=center>
+                <td><img height=70 src="face.jpg"></td>
+                <td colspan=3>Адрес: ул.Белорусская, д.5, ком.430</td>
+            </tr>
+            <tr align=center>
+                <td rowspan=6 >1 семестр
+                        2016/2017 уч. года
+                </td>
+                <td>Дата</td>
+                <td>Предмет</td>
+                <td>Оценка</td>
+            </tr>
+            <tr align=center>
+                <td>11.12.2016</td>
+                <td>ОИТ</td>
+                <td id="mark1">8</td>
+            </tr>
+            <tr align=center>
+                <td>16.12.2016</td>
+                <td>ОАП</td>
+                <td id="mark2">4</td>
+            </tr>
+            <tr align=center>
+                <td>19.12.2016</td>
+                <td>Полиграфика</td>
+                <td id="mark3">6</td>
+            </tr>
+            <tr align=center>
+                <td>25.12.2016</td>
+                <td>Физика</td>
+                <td id="mark4">7</td>
+            </tr>
+            <tr align=center>
+                <td>31.12.2016</td>
+                <td>Математика</td>
+                <td id="mark5">10</td>
+            </tr>
+			<tr align=center>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+     <input type="button" onclick="go()" value="Task 1"/>
+	 <input type="button" onclick="go1()" value="Task 2"/>
+	 <input type="button" onclick="go2()" value="Task 3"/>
+	 <input type="button" onclick="go3()" value="Task 4"/>
+    </body>
+</html>
+    

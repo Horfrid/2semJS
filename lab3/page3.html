@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div> <h1 align="center"> Задание №3 </h1> </div>
+<script type="text/javascript">
+	var name = new String (' Радкевич Александр Дмитриевич');
+	document.write('Исходная строка: ' + name + '<br>' + 'Верхний регистр: ' + name.toUpperCase() + '<br>' + 'Нижний регистр: ' + name.toLowerCase() + '<br>');
+	document.write('ФИО: ');
+	for (i = 1; i < name.length; i++)
+		if (name[i] != ' ' && name[i - 1] == ' ')
+			document.write(name[i]);
+</script>
+</body>
+</html>

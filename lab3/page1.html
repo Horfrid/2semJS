@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	var arr = new Array();
+	arr[0] = 6*Math.PI*Math.PI+3*Math.pow(Math.E, 8);
+	arr[1] = 2*Math.cos(4)+Math.cos(12)+8*Math.pow(Math.E, 3);
+	arr[2] = 3*Math.sin(9)+Math.log(5)+Math.sqrt(3);
+	arr[3] = 2*Math.tan(5)+6*Math.PI+Math.sqrt(12);
+ 	var max = 0, index_max, min = 999, index_min;
+	for (var i = 0; i < 3; i++)
+	{
+		if (max < arr[i])
+		{
+			max = arr[i];
+			index_max = i;
+		}
+	}
+	var length = arr.length, min = 999, index_min;
+	for (var i = 0; i < length; i++)
+	{
+		if (min > arr[i])
+		{
+			min = arr[i];
+			index_min = i;
+		}
+	}
+	document.write('Максимальный элемент равен ' + max + ', его индекс ' + (index_max+1) + '. Минимальный элемент равен ' + min + ', его индекс ' + (index_min+1) + '.'); 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+function Student(name,surname,physics,maths,informatics) {
+this.name=name;
+this.surname=surname;
+this.physics=physics;
+this.maths=maths;
+this.informatics=informatics;
+this.name_and_surname=function name_and_surname() {
+alert("Имя и Фамилия студента: "+this.name + " "+ this.surname); 
+}
+this.average_mark=function average_mark(avr) {
+avr=(this.physics)/3 + (this.maths)/3 + (this.informatics)/3;
+document.write("Средний балл студента "+this.name + " "+ this.surname + " равен " + avr); 
+}
+
+this.studlist=function studlist() {
+document.write("<p>Имя студента: "+this.name + "</p>"+ "<p>Фамилия студента: "+ this.surname + "</p>" + "<p>Отметка по физике: " + this.physics + "</p>" + "<p>Отметка по математике: " + this.maths + "</p>" + "<p>Отметка по информатике: " + this.informatics+ "</p>"+ "<hr>"); ;
+
+}
+
+}
+let student1=new Student();
+student1.name=prompt("Введите имя студента");
+student1.surname=prompt("Введите фамилию студента");
+student1.physics=prompt("Введите оценку по физике", "4");
+student1.maths=prompt("Введите оценку по математике", "4");
+student1.informatics=prompt("Введите оценку по информатике", "4");
+student1.name_and_surname();
+student1.average_mark();
+student2=new Student("Иван", 'Петров', 8, 7, 10);
+student3=new Student("Петр", 'Иванов', 3, 10, 5);
+
+student1.studlist();
+student2.studlist();
+student3.studlist();
+Student.prototype.kurs=this.kurs;
+student1.kurs="Первый курс";
+document.write(student1.name +" "+ student1.surname +" "+ student1.kurs +" "+ student1.physics +" "+ student1.maths +" "+ student1.informatics)
+
+</script>
+
+</body>
+</html>
