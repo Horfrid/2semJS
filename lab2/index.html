@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Задание 1</title>
+<script type='text/javascript'>
+function fun1() {
+alert('Вас приветствует учебный центр');
+name=prompt('Введите имя:', 'Имя');
+alert('Добро пожаловать на наши курсы,'+ name);
+cond=confirm('Хотите стать Web-дизайнером?');
+if (cond==true) {
+   alert('Учите стили CSS и JavaScript!');
+}
+else {
+   alert('Упускаете время!');
+}
+}
+function fun2() {
+    var x=10, y=5;
+    document.write("Ответ:",x+y);
+    var x="10", y="5";
+    document.write("Ответ:",x+y);
+    var x=22, y="5";
+    document.write("Ответ:",x+y);
+    alert('Результатом сложения строки и числа всегда будет строка');
+    var x="22", y=5;
+    document.write("Ответ:",x+y);
+    alert('Результатом сложения строки и числа всегда будет строка');
+}
+function fun3() {
+var a=12, b=27,c,d;
+c=(13*a+5*b)%(7*a-2*b);
+alert('(13a+5b)%(7a-2b)=');
+alert(c);
+document.write("Ответ:",c);
+}
+function fun4() {
+x=prompt("Введите число", "число");
+if ((x<20 && x!=15) || (x>40 && x%5==0)){
+    alert("Правильное значение")
+}
+else alert("Неправильное значение");
+}
+function fun5() {
+a=prompt("Введите число A");
+b=prompt("Введите число B");
+a>b?alert('Число А больше числа B'):a<b?alert('Число А меньше числа B'):alert('Числа равны');
+}
+function fun6() {
+var date;
+date=new Date().getDay()
+switch(date)
+{
+  case 0:alert("Воскресенье");break;
+  case 1:alert("Понедельник");break;
+  case 2:alert("Вторник");break;
+  case 3:alert("Среда");break;
+  case 4:alert("Четверг");break;
+  case 5:alert("Пятница");break;
+  case 6:alert("Суббота");break;
+}
+}
+function fun7() {
+try {
+a;
+} catch (a) {
+alert("Переменная не определена");
+}
+
+}
+
+</script>
+</head>
+<body>
+<input type='button' value='Задание 1' onclick='fun1()' />
+<input type='button' value='Задание 2' onclick='fun2()' />
+<input type='button' value='Задание 3' onclick='fun3()' />
+<input type='button' value='Задание 4' onclick='fun4()' />
+<input type='button' value='Задание 5' onclick='fun5()' />
+<input type='button' value='Задание 6' onclick='fun6()' />
+<input type='button' value='Задание 7' onclick='fun7()' />
+
+</body>
+</html>

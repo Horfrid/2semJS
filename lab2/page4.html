@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+ 	 td{
+      text-align:center;
+      border:2px solid green; 
+      background: lightgray
+    }
+ </style>
+</head>
+<body>
+<script>
+x= new Number(127.18);
+y= new Number(666);
+document.write('<table><tr>  <th>Число</th>  <th>Метод</th>  <th>Результат</th> <th>Описание метода</th></tr>');
+document.write('<tr>  <td > 127.18 </td>  <td> toString(16) </td>  <td>' + x.toString(16) + '</td> <td> Возвращает строковое представление числа в системе счисления с указанным основанием (в данном случае 16 с/с). </td></tr>');
+document.write('<tr>  <td> 127.18 </td>  <td> toExponential(2) </td>  <td>' + x.toExponential(2) + '</td> <td> Представляет число в экспоненциальной форме с целым числом знаков после точки (в данном случае 2). </td></tr>');
+document.write('<tr>  <td> 127.18 </td>  <td> toFixed(1) </td>  <td>' + x.toFixed(1) + '</td> <td> Представляет число в форме с фиксированным количеством цифр после точки (1). </td></tr>');
+document.write('<tr>  <td> 127.18 </td>  <td> toPrecision(3) </td>  <td>' + x.toPrecision(3) + '</td> <td> Представляет число с заданным общим количеством значащих цифр с некоторой точночтью (3). </td></tr>');
+document.write('<tr>  <td > 666 </td>  <td> toString(16) </td>  <td>' + y.toString(8) + '</td> <td> Возвращает строковое представление числа в системе счисления с указанным основанием (здесь 8-ричная система счисления). </td></tr>');
+document.write('<tr>  <td> 666 </td>  <td> toExponential(2) </td>  <td>' + y.toExponential(3) + '</td> <td> Представляет число в экспоненциальной форме с целым числом знаков после точки (здесь 3). </td></tr>');
+document.write('<tr>  <td> 666 </td>  <td> toFixed(1) </td>  <td>' + y.toFixed(2) + '</td> <td> Представляет число в форме с фиксированным количеством цифр после точки (здесь 2). </td></tr>');
+document.write('<tr>  <td> 666 </td>  <td> toPrecision(3) </td>  <td>' + y.toPrecision(1) + '</td> <td> Представляет число с заданным общим количеством значащих цифр с некоторой точночтью (1). </td></tr>');
+document.write('</table>');
+</script>
+</body>
+</html>

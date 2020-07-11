@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+</html>
+<head><title>Задание 2</title></head>
+<body>
+  <table> 
+    <script> 
+    var a,b;
+    a=prompt("Введите число A");
+    b=prompt("Введите число B");
+    document.write("<tr><td style='border:2px solid green; background: gray; color:#fff'>Таблица умножения</td>"); 
+    for (i = 1; i <=b; i++) document.write("<td style='text-align:center;border:2px solid green; background: lightgray'>"+ i +" </td>"); 
+    document.write("</tr>"); 
+    for (i = 1; i <=a; i++) 
+    { 
+    document.write("<tr><td style='border:2px solid green; background: lightgray'>" + i + " </td>"); 
+    for (j = 1; j <= b; j++) 
+    { 
+    document.write("<td style='text-align:center;border:2px solid green'>" + (i*j) + " </td>");} 
+    document.write("</tr>"); 
+    }
+    </script> 
+    </table>
+</body>
+</html>
